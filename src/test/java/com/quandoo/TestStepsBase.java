@@ -3,6 +3,7 @@ package com.quandoo;
 import com.codeborne.selenide.WebDriverRunner;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -13,6 +14,19 @@ import org.openqa.selenium.WebDriver;
  */
 public class TestStepsBase {
     protected WebDriver driver;
+    /* properties */
+    public static String basicURL = PropertiesLoader.loadProperty("url");
+    public static String existingUsername = PropertiesLoader.loadProperty("existing.username");
+    public static String existingPassword = PropertiesLoader.loadProperty("existing.password");
+    public static String successfulLoginMessage = PropertiesLoader.loadProperty("positive.login.message");
+
+    /* selectors */
+
+    public static By usernameField = By.cssSelector("#username");
+    public static By passwordField = By.cssSelector("#password");
+    public static By loginButton = By.cssSelector("button.radius");
+    public static By textMessage = By.cssSelector("#flash");
+
 
     @Before
     public void buildDriver() {

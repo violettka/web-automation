@@ -4,7 +4,6 @@ Feature: Login Page
   I want to login
 
 Background:
-
     Given I am on the Login page
 
   Scenario: Positive login
