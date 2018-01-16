@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.quandoo.TestStepsBase.*;
 
 /**
- * CommonSteps
+ * LoginSteps
  * Class implements the step definitions for testing the Login page.
  *
  * @author Violeta Abramova abramova.violetta@gmail.com

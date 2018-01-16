@@ -14,7 +14,9 @@ import org.openqa.selenium.WebDriver;
  */
 public class TestStepsBase {
     protected WebDriver driver;
+
     /* properties */
+
     public static String basicURL = PropertiesLoader.loadProperty("url");
     public static String existingUsername = PropertiesLoader.loadProperty("existing.username");
     public static String existingPassword = PropertiesLoader.loadProperty("existing.password");
@@ -26,7 +28,9 @@ public class TestStepsBase {
     public static By passwordField = By.cssSelector("#password");
     public static By loginButton = By.cssSelector("button.radius");
     public static By textMessage = By.cssSelector("#flash");
-
+    public static By user1 = By.cssSelector("h5");
+    public static By user2 = By.xpath("//div[@id='content']/div/div[2]/div/h5");
+    public static By user3 = By.xpath("//div[@id='content']/div/div[3]/div/h5");
 
     @Before
     public void buildDriver() {
