@@ -31,6 +31,8 @@ public class TestStepsBase {
     public static By user1 = By.cssSelector("h5");
     public static By user2 = By.xpath("//div[@id='content']/div/div[2]/div/h5");
     public static By user3 = By.xpath("//div[@id='content']/div/div[3]/div/h5");
+    public static By lastNameHeader = By.cssSelector("span.last-name");
+    public static By lastNameColumn = By.xpath("//*[@id=\"table2\"]/tbody/tr/td[1]");
 
     @Before
     public void buildDriver() {
