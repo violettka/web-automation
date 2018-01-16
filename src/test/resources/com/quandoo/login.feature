@@ -3,20 +3,20 @@ Feature: Login Page
   As an existing user
   I want to login
 
-  Given Login page
+Background:
+
+    Given I am on the Login page
 
   Scenario: Positive login
-
     When I login with existing credentials
     Then I observe the successful login message
 
   Scenario Outline: Negative login
-
-    When I login with <use_case> credentials
-    Then I observe the <use_case> message
+    When I login with <credentials_type> credentials
+    Then I observe the <message_type> login message
 
   Examples:
 
-    | use_case |
-    | wrong username |
-    | wrong password |
+    | credentials_type | message_type           |
+    | wrong.username   | wrong.username.message |
+    | wrong.password   | wrong.password.message |
