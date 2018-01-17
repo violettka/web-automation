@@ -16,11 +16,8 @@ public class PropertiesLoader {
     }
 
     public static String loadProperty(String name) {
-//        String resource = Thread.currentThread().getContextClassLoader().getResource(PROP_FILE).getFile();
         Properties props = new Properties();
-//        InputStream inputStream;
         try {
-//            inputStream = PropertiesLoader.class.getClassLoader().getResourceAsStream(resource);
             props.load(PropertiesLoader.class.getResourceAsStream(PROP_FILE));
         } catch (IOException e) {
             e.printStackTrace();
