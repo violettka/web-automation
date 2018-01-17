@@ -3,7 +3,7 @@ package com.quandoo.steps;
 import cucumber.api.java8.En;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.quandoo.TestStepsBase.basicURL;
+import static com.quandoo.pages.BasePage.basicURL;
 
 /**
  * CommonSteps

@@ -1,4 +1,4 @@
-package com.quandoo;
+package com.quandoo.driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

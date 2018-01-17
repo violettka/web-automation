@@ -1,9 +1,12 @@
 package com.quandoo;
 
 import com.codeborne.selenide.WebDriverRunner;
+import com.quandoo.driver.ChromeWebDriver;
+import com.quandoo.pages.HoversPage;
+import com.quandoo.pages.LoginPage;
+import com.quandoo.pages.TablesPage;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -13,32 +16,18 @@ import org.openqa.selenium.WebDriver;
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
 public class TestStepsBase {
+
+    public LoginPage loginPage;
+    public HoversPage hoversPage;
+    public TablesPage tablesPage;
     protected WebDriver driver;
-
-    /* properties */
-
-    public static String basicURL = PropertiesLoader.loadProperty("url");
-    public static String existingUsername = PropertiesLoader.loadProperty("existing.username");
-    public static String existingPassword = PropertiesLoader.loadProperty("existing.password");
-    public static String successfulLoginMessage = PropertiesLoader.loadProperty("positive.login.message");
-
-    /* selectors */
-
-    public static By usernameField = By.cssSelector("#username");
-    public static By passwordField = By.cssSelector("#password");
-    public static By loginButton = By.cssSelector("button.radius");
-    public static By textMessage = By.cssSelector("#flash");
-    public static By user1 = By.cssSelector("h5");
-    public static By user2 = By.xpath("//div[@id='content']/div/div[2]/div/h5");
-    public static By user3 = By.xpath("//div[@id='content']/div/div[3]/div/h5");
-    public static By lastNameHeader = By.cssSelector("span.last-name");
-    public static By lastNameColumn = By.xpath("//*[@id=\"table2\"]/tbody/tr/td[1]");
 
     @Before
     public void buildDriver() {
         driver = ChromeWebDriver.getWebDriverInstance();
         driver.manage().window().maximize();
-        WebDriverRunner.setWebDriver(driver); //set Selenide WebDriver
+        initPageObjects();
+        WebDriverRunner.setWebDriver(driver);//set Selenide WebDriver
     }
 
     @After
@@ -47,5 +36,11 @@ public class TestStepsBase {
             driver.close();
             driver.quit();
         }
+    }
+
+    private void initPageObjects() {
+        loginPage = new LoginPage(driver);
+        hoversPage = new HoversPage(driver);
+        tablesPage = new TablesPage(driver);
     }
 }

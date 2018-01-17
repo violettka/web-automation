@@ -1,7 +1,6 @@
-package com.quandoo;
+package com.quandoo.util;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 /*
