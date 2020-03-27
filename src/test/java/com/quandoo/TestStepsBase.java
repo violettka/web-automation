@@ -5,8 +5,8 @@ import com.quandoo.driver.ChromeWebDriver;
 import com.quandoo.pages.HoversPage;
 import com.quandoo.pages.LoginPage;
 import com.quandoo.pages.TablesPage;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -25,7 +25,6 @@ public class TestStepsBase {
     @Before
     public void buildDriver() {
         driver = ChromeWebDriver.getWebDriverInstance();
-        driver.manage().window().maximize();
         initPageObjects();
         WebDriverRunner.setWebDriver(driver);//set Selenide WebDriver
     }

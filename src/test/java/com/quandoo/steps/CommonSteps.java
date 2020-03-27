@@ -1,6 +1,6 @@
 package com.quandoo.steps;
 
-import cucumber.api.java8.En;
+import io.cucumber.java8.En;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.quandoo.pages.BasePage.basicURL;
@@ -15,7 +15,7 @@ public class CommonSteps implements En {
 
     public CommonSteps() {
 
-        Given("I am on the (.*) page", (String page) -> {
+        Given("I am on the {} page", (String page) -> {
             if (page.equals("Login")) {
                 open(basicURL + "/login");
             }

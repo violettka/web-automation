@@ -1,6 +1,6 @@
 package com.quandoo.steps;
 
-import cucumber.api.java8.En;
+import io.cucumber.java8.En;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.quandoo.pages.LoginPage.*;
@@ -15,12 +15,12 @@ public class LoginSteps implements En {
 
     public LoginSteps() {
 
-        When("I login with (.*) credentials", (String credentials) -> {
+        When("I login with {} credentials", (String credentials) -> {
             insertCredentials(credentials);
             $(loginButton).click();
         });
 
-        Then("I observe the (.*) login message", (String message) -> {
+        Then("I observe the {} login message", (String message) -> {
             verifyMessageText(message);
         });
     }

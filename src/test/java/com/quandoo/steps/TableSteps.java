@@ -1,6 +1,6 @@
 package com.quandoo.steps;
 
-import cucumber.api.java8.En;
+import io.cucumber.java8.En;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class TableSteps implements En {
             $(lastNameHeader).click();
         });
 
-        Then("I see (.*) order of the entries", (String order) -> {
+        Then("I see {} order of the entries", (String order) -> {
             verifyEntriesOrder(order, columnTextsBeforeClick);
         });
     }

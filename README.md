@@ -5,17 +5,10 @@ This is the web test automation project for testing http://the-internet.herokuap
 ## Features
 
 Project has tree feature files which represents the following scenarios:
-1. Login page:
-  * positive login and confirmation message text verification
-  * negative login: wrong username and validation message verification
-  * negative login: wrong password and validation message verification
   
-2. Hovers page:
+ Hovers page:
   * hover each avatar and verify username text appeared underneath
   
-3. Tables page:
-  * Order the Last Name column of the table Example 2 to check correct ascending/descending ordering of the entries
-
 Feature files location:
 
 `src\test\resources\com\quandoo\`
