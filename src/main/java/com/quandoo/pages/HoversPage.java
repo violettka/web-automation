@@ -11,13 +11,11 @@ import static com.codeborne.selenide.Selenide.$;
  *
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
-public class HoversPage extends BasePage {
+public class HoversPage extends com.quandoo.pages.BasePage {
 
     /* properties */
 
     public static By user1 = By.cssSelector("h5");
-    public static By user2 = By.xpath("//div[@id='content']/div/div[2]/div/h5");
-    public static By user3 = By.xpath("//div[@id='content']/div/div[3]/div/h5");
 
     public HoversPage(WebDriver driver) {
         super(driver);
@@ -26,10 +24,6 @@ public class HoversPage extends BasePage {
     public static void checkUsername(String username) {
         if (username.equals("user1"))
             assert ($(user1).getText().contains(username));
-        if (username.equals("user2"))
-            assert ($(user2).getText().contains(username));
-        if (username.equals("user3"))
-            assert ($(user3).getText().contains(username));
     }
 
     public static By generateXpath(String index) {
