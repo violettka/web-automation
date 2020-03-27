@@ -15,7 +15,7 @@ Feature files location:
 
 ## Prerequisites Software/Tools
 
-1. Java Development Kit
+1. Java Development Kit (Java 8)
 2. Java Runtime Environment
 3. Maven [ http://maven.apache.org/ ]
 4. Git [ http://git-scm.com/downloads ]
