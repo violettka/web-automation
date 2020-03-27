@@ -3,8 +3,6 @@ package com.quandoo;
 import com.codeborne.selenide.WebDriverRunner;
 import com.quandoo.driver.ChromeWebDriver;
 import com.quandoo.pages.HoversPage;
-import com.quandoo.pages.LoginPage;
-import com.quandoo.pages.TablesPage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -17,9 +15,7 @@ import org.openqa.selenium.WebDriver;
  */
 public class TestStepsBase {
 
-    public LoginPage loginPage;
     public HoversPage hoversPage;
-    public TablesPage tablesPage;
     protected WebDriver driver;
 
     @Before
@@ -38,8 +34,6 @@ public class TestStepsBase {
     }
 
     private void initPageObjects() {
-        loginPage = new LoginPage(driver);
         hoversPage = new HoversPage(driver);
-        tablesPage = new TablesPage(driver);
     }
 }
