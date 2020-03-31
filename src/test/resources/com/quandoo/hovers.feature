@@ -6,5 +6,8 @@ Background:
     Given I am on the Hovers page
 
   Scenario: Hover avatars
-    When I hover avatar 1
-    Then I observe the user1 username
+    When I hover avatar 3
+    Then I observe the user3 username
+
+    When I click on View profile link
+    Then I see Not Found message on User page

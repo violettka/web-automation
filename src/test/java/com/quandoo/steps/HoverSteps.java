@@ -1,11 +1,12 @@
 package com.quandoo.steps;
 
-import com.quandoo.pages.HoversPage;
 import io.cucumber.java8.En;
+import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.matchesText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.quandoo.pages.HoversPage.checkUsername;
-import static com.quandoo.pages.HoversPage.generateXpath;
+
 
 /**
  * HoverSteps
@@ -16,12 +17,22 @@ import static com.quandoo.pages.HoversPage.generateXpath;
 public class HoverSteps implements En {
     public HoverSteps() {
 
-        When("I hover avatar {}", (String index) -> {
-            $(generateXpath(index)).hover();
+        When("I hover avatar 3", () -> {
+            $(By.xpath("//div[3]//img[1]")).hover();
         });
 
-        Then("I observe the {} username", (String username) -> {
-            checkUsername(username);
+        Then("I observe the user3 username", () -> {
+            $(By.xpath("//div[3]/div/h5")).shouldHave(matchesText("user3"));
+        });
+
+        When("I click on View profile link", () -> {
+            $(By.linkText("View profile")).click();
+        });
+
+        Then("I see Not Found message on User page", () -> {
+            $(By.cssSelector("h1")).shouldHave(exactText("Not Found"));
         });
     }
+
+
 }

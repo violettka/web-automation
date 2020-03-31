@@ -14,7 +14,7 @@ public class BasePage {
     public static String basicURL = PropertiesLoader.loadProperty("url");
 
      /* properties */
-    protected WebDriver driver;
+    public static WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
