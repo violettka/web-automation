@@ -1,3 +1,4 @@
+@hovers
 Feature: Hovers Page
   In order to see the usernames
   I hover over the avatar pictures

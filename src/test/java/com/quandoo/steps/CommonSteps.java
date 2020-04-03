@@ -19,6 +19,9 @@ public class CommonSteps implements En {
             if (page.equals("Hovers")) {
                 open(basicURL + "/hovers");
             }
+            if (page.equals("Challenging Dom")){
+                open(basicURL + "/challenging_dom");
+            }
         });
     }
 }

@@ -7,6 +7,11 @@ import org.junit.runner.RunWith;
 import java.util.logging.Logger;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"json:target/cucumber-report.json", "pretty"}, glue = "com.quandoo", strict = true)
+@CucumberOptions(
+        plugin = {"json:target/cucumber-report.json", "pretty"},
+        glue = "com.quandoo",
+        strict = true,
+        tags = "@dom"
+)
 public class RunCukesTest {
 }
