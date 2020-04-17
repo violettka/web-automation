@@ -22,6 +22,12 @@ public class CommonSteps implements En {
             if (page.equals("Challenging Dom")){
                 open(basicURL + "/challenging_dom");
             }
+            if (page.equals("Login")){
+                open(basicURL + "/login");
+            }
+            if (page.equals("Glovo")){
+                open("https://glovoapp.com/en/partners/sales");
+            }
         });
     }
 }

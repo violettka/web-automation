@@ -11,7 +11,7 @@ import java.util.logging.Logger;
         plugin = {"json:target/cucumber-report.json", "pretty"},
         glue = "com.quandoo",
         strict = true,
-        tags = "@dom"
+        tags = "@glovo"
 )
 public class RunCukesTest {
 }

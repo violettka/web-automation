@@ -5,6 +5,7 @@ import com.quandoo.driver.ChromeWebDriver;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+import com.github.javafaker.Faker;
 
 /**
  * StepsBaseTest
@@ -16,6 +17,7 @@ public class StepsBaseTest {
 
 //    public HoversPage hoversPage;
     protected WebDriver driver;
+    public Faker faker;
 
     @Before
     public void buildDriver() {

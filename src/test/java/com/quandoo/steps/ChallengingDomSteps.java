@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 public class ChallengingDomSteps implements En {
-    String buttonText;
+    private String buttonText;
     public ChallengingDomSteps() {
 
         When("I click on the blue button", () -> {

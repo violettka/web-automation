@@ -1,5 +1,6 @@
 package com.quandoo.pages;
 
+import com.github.javafaker.Faker;
 import com.quandoo.util.PropertiesLoader;
 import org.openqa.selenium.WebDriver;
 
@@ -12,8 +13,8 @@ import org.openqa.selenium.WebDriver;
 public class BasePage {
 
     public static String basicURL = PropertiesLoader.loadProperty("url");
+    public static Faker faker = new Faker();
 
-     /* properties */
     public static WebDriver driver;
 
     public BasePage(WebDriver driver) {
