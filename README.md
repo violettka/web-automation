@@ -11,7 +11,7 @@ Project has tree feature files which represents the following scenarios:
   
 Feature files location:
 
-`src\test\resources\com\quandoo\`
+`src\test\resources\com\herokuapp\`
 
 ## Prerequisites Software/Tools
 

@@ -1,7 +1,7 @@
-package com.quandoo;
+package com.herokuapp;
 
 import com.codeborne.selenide.WebDriverRunner;
-import com.quandoo.driver.ChromeWebDriver;
+import com.herokuapp.driver.ChromeWebDriver;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -15,15 +15,14 @@ import com.github.javafaker.Faker;
  */
 public class StepsBaseTest {
 
-//    public HoversPage hoversPage;
+    public HoversPage hoversPage;
     protected WebDriver driver;
-    public Faker faker;
 
     @Before
     public void buildDriver() {
         driver = ChromeWebDriver.getWebDriverInstance();
-//        initPageObjects();
-        WebDriverRunner.setWebDriver(driver);//set Selenide WebDriver
+        initPageObjects();
+        WebDriverRunner.setWebDriver(driver); //set Selenide WebDriver
     }
 
     @After
@@ -34,7 +33,7 @@ public class StepsBaseTest {
         }
     }
 
-//    private void initPageObjects() {
-//        hoversPage = new HoversPage(driver);
-//    }
+    private void initPageObjects() {
+        hoversPage = new HoversPage(driver);
+    }
 }

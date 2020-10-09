@@ -1,7 +1,7 @@
-package com.quandoo.pages;
+package com.herokuapp.pages;
 
 import com.github.javafaker.Faker;
-import com.quandoo.util.PropertiesLoader;
+import com.herokuapp.util.PropertiesLoader;
 import org.openqa.selenium.WebDriver;
 
 /**

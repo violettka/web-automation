@@ -1,4 +1,4 @@
-package com.quandoo.util;
+package com.herokuapp.util;
 
 import java.io.IOException;
 import java.util.Properties;

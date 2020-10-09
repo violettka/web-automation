@@ -1,4 +1,4 @@
-package com.quandoo.steps;
+package com.herokuapp.steps;
 
 import io.cucumber.java8.En;
 import org.openqa.selenium.By;

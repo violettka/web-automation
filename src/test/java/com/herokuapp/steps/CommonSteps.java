@@ -1,9 +1,9 @@
-package com.quandoo.steps;
+package com.herokuapp.steps;
 
 import io.cucumber.java8.En;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.quandoo.pages.BasePage.basicURL;
+import static com.herokuapp.pages.BasePage.basicURL;
 
 /**
  * CommonSteps
@@ -18,15 +18,6 @@ public class CommonSteps implements En {
         Given("I am on the {} page", (String page) -> {
             if (page.equals("Hovers")) {
                 open(basicURL + "/hovers");
-            }
-            if (page.equals("Challenging Dom")){
-                open(basicURL + "/challenging_dom");
-            }
-            if (page.equals("Login")){
-                open(basicURL + "/login");
-            }
-            if (page.equals("Glovo")){
-                open("https://glovoapp.com/en/partners/sales");
             }
         });
     }
