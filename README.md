@@ -23,9 +23,9 @@ Feature files location:
 
 ## Installation/Running Tests
 
-`git clone https://github.com/violettka/quandoo-assignment.git`
+`git clone https://github.com/violettka/web-automation.git`
 
-`cd quandoo-assignment/`
+`cd web-automation/`
 
 `mvn test`
 
