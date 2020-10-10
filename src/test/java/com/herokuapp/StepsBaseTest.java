@@ -2,10 +2,10 @@ package com.herokuapp;
 
 import com.codeborne.selenide.WebDriverRunner;
 import com.herokuapp.driver.ChromeWebDriver;
+import com.herokuapp.pages.HoversPage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import com.github.javafaker.Faker;
 
 /**
  * StepsBaseTest

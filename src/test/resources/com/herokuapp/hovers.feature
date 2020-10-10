@@ -9,6 +9,3 @@ Background:
   Scenario: Hover avatars
     When I hover avatar 3
     Then I observe the user3 username
-
-    When I click on View profile link
-    Then I see Not Found message on User page

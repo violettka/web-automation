@@ -1,6 +1,5 @@
 package com.herokuapp.pages;
 
-import com.github.javafaker.Faker;
 import com.herokuapp.util.PropertiesLoader;
 import org.openqa.selenium.WebDriver;
 
@@ -13,7 +12,6 @@ import org.openqa.selenium.WebDriver;
 public class BasePage {
 
     public static String basicURL = PropertiesLoader.loadProperty("url");
-    public static Faker faker = new Faker();
 
     public static WebDriver driver;
 
