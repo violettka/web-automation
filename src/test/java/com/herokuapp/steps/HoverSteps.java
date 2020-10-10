@@ -19,12 +19,12 @@ import static com.herokuapp.pages.HoversPage.generateXpath;
 public class HoverSteps implements En {
     public HoverSteps() {
 
-        When("I hover avatar {}", (String index) -> {
-            $(generateXpath(index)).hover();
+        When("I hover avatar 3", () -> {
+            $(generateXpath("3")).hover();
         });
 
-        Then("I observe the {} username", (String username) -> {
-            checkUsername(username);
+        Then("I observe the user3 username", () -> {
+            checkUsername("user3");
         });
     }
 
