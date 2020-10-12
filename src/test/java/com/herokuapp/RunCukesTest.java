@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"json:target/cucumber-report.json", "pretty"},
         glue = "com.herokuapp",
-        strict = true,
-        tags = "@hovers"
+        strict = true
 )
 public class RunCukesTest {
 }
