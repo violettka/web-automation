@@ -15,8 +15,13 @@ public class CommonSteps implements En {
 
     public CommonSteps() {
 
-        Given("I am on the Hovers page", () -> {
-            open(basicURL + "/hovers");
+        Given("I am on the {} page", (String page) -> {
+            if (page.equals("Hovers")) {
+                open(basicURL + "/hovers");
+            }
+            if (page.equals("Login")) {
+                open(basicURL + "/login");
+            }
         });
     }
 }
