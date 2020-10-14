@@ -13,6 +13,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.herokuapp.pages.LoginPage.*;
 
+/**
+ * LoginSteps
+ * Class implements the step definitions for testing the Login page.
+ *
+ * @author Violeta Abramova abramova.violetta@gmail.com
+ */
 public class LoginSteps implements En {
 
     public LoginSteps() {

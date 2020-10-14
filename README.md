@@ -29,6 +29,8 @@ Feature files location:
 
 `mvn test`
 
+run separate test `mvn test -Dcucumber.options="--tags @login"`
+
 ## Contributors
 
 Violeta Abramova abramova.violetta@gmail.com
