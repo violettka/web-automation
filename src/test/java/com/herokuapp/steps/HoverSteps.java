@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.matchesText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.herokuapp.pages.HoversPage.generateXpath;
+import static com.herokuapp.pages.HoversPage.user2;
 import static com.herokuapp.pages.HoversPage.user3;
 
 
@@ -19,12 +20,17 @@ import static com.herokuapp.pages.HoversPage.user3;
 public class HoverSteps implements En {
     public HoverSteps() {
 
-        When("I hover avatar 3", () -> {
-            $(generateXpath("3")).hover();
+        When("I hover avatar {}", (String index) -> {
+            $(generateXpath(index)).hover();
         });
 
-        Then("I observe the user3 username", () -> {
-            assert ($(user3).getText().contains("user3"));
+        Then("I observe the {} username", (String username) -> {
+            By user = null;
+            if (username.equals("user3"))
+                user = user3;
+            if (username.equals("user2"))
+                user = user2;
+            assert ($(user).getText().contains(username));
         });
     }
 
