@@ -34,7 +34,9 @@ public class LoginSteps implements En {
             // input credentials
             $(usernameField).setValue(username);
             $(passwordField).setValue(password);
+        });
 
+        When("I click on Login button", () -> {
             // login
             $(loginButton).click();
         });

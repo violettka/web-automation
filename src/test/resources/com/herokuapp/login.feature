@@ -8,4 +8,5 @@ Feature: Login Page
     When I enter user credentials:
       | username | password             |
       | tomsmith | SuperSecretPassword! |
+    And I click on Login button
     Then I see successful login message
