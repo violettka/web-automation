@@ -5,9 +5,11 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.matchesText;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.herokuapp.pages.HoversPage.generateXpath;
 import static com.herokuapp.pages.HoversPage.user3;
+import static org.openqa.selenium.By.linkText;
 
 
 /**
@@ -25,6 +27,10 @@ public class HoverSteps implements En {
 
         Then("I observe the user3 username", () -> {
             assert ($(user3).getText().contains("user3"));
+        });
+
+        When("I click on text {}", (String text) -> {
+            $(By.linkText(text)).click();
         });
     }
 

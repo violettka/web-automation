@@ -13,27 +13,25 @@ import org.openqa.selenium.WebDriver;
  *
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
-public class StepsBaseTest {
-
-    public HoversPage hoversPage;
-    protected WebDriver driver;
-
-    @Before
-    public void buildDriver() {
-        driver = ChromeWebDriver.getWebDriverInstance();
-        initPageObjects();
-        WebDriverRunner.setWebDriver(driver); //set Selenide WebDriver
-    }
-
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.close();
-            driver.quit();
-        }
-    }
-
-    private void initPageObjects() {
-        hoversPage = new HoversPage(driver);
-    }
-}
+//public class StepsBaseTest {
+//
+//    public HoversPage hoversPage;
+//
+//    @Before
+//    public void buildDriver() {
+//        ChromeWebDriver.setChromeDriver();
+//        initPageObjects();
+//    }
+//
+//    @After
+//    public void tearDown() {
+////        if (driver != null) {
+////            driver.close();
+////            driver.quit();
+////        }
+//    }
+//
+//    private void initPageObjects() {
+//        hoversPage = new HoversPage();
+//    }
+//}

@@ -23,7 +23,7 @@ public class ChromeWebDriver {
      *
      * @return new WebDriver object which corresponds local system Chrome properties.
      */
-    public static WebDriver getWebDriverInstance() {
+    public static void setChromeDriver() {
         if (System.getProperty(OS).contains("Linux")
                 && System.getProperty(OS_TYPE).contains("64")) {
             System.setProperty(DRIVER, DRIVER_PATH_LINUX);
@@ -32,6 +32,5 @@ public class ChromeWebDriver {
         } else if (System.getProperty(OS).contains("Windows")) {
             System.setProperty(DRIVER, DRIVER_PATH_WIN);
         }
-        return new ChromeDriver();
     }
 }
