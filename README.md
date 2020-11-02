@@ -27,7 +27,9 @@ Feature files location:
 
 `cd web-automation/`
 
-`mvn test`
+`mvn test -Dbrowser=Firefox`
+
+
 
 ## Contributors
 
