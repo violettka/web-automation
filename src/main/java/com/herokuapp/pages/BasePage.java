@@ -1,7 +1,6 @@
 package com.herokuapp.pages;
 
 import com.herokuapp.util.PropertiesLoader;
-import org.openqa.selenium.WebDriver;
 
 /**
  * BasePage

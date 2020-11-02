@@ -1,5 +1,6 @@
 package com.herokuapp;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -27,9 +28,9 @@ public class RunCukesTest extends AbstractTestNGCucumberTests {
     @BeforeTest
     public void setupBrowser(String browser){
         if (browser.equals("Chrome")){
-            System.setProperty("selenide.browser", "Chrome");
+            System.setProperty("selenide.browser", "chrome");
         } else if (browser.equals("Firefox")){
-            System.setProperty("selenide.browser", "Firefox");
+            System.setProperty("selenide.browser", "firefox");
         }
     }
 }
