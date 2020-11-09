@@ -1,5 +1,6 @@
 package com.herokuapp.steps;
 
+
 import io.cucumber.java8.En;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -12,7 +13,6 @@ import static com.herokuapp.pages.BasePage.basicURL;
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
 public class CommonSteps implements En {
-
     public CommonSteps() {
 
         Given("I am on the Hovers page", () -> {

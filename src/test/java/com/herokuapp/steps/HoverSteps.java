@@ -20,7 +20,7 @@ public class HoverSteps implements En {
     public HoverSteps() {
 
         When("I hover avatar 3", () -> {
-            $(generateXpath("3")).hover();
+            $(generateXpath("3")).scrollTo().click();
         });
 
         Then("I observe the user3 username", () -> {
