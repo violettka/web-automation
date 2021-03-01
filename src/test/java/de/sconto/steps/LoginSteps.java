@@ -8,6 +8,12 @@ import io.cucumber.java8.En;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.page;
 
+/**
+ * LoginSteps
+ * Class implements the Login page step definitions.
+ *
+ * @author Violeta Abramova abramova.violetta@gmail.com
+ */
 public class LoginSteps implements En {
 
     LoginPage loginPage;
