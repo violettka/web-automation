@@ -10,13 +10,12 @@ import static de.sconto.pages.HomePage.basicURL;
 
 /**
  * HomePageSteps
- * Class implements the common step definitions for several feature files.
+ * Class implements the Homepage step definitions.
  *
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
 public class HomePageSteps implements En {
     HomePage homePage;
-    LoginPage loginPage;
 
     public HomePageSteps() {
 
