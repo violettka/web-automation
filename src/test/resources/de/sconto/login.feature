@@ -13,3 +13,4 @@ Feature: Sconto Login Feature
 
     When I click on the Login icon
     Then I should be logged in
+

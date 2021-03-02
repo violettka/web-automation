@@ -1,6 +1,7 @@
 package de.sconto.steps;
 
 import com.codeborne.selenide.Condition;
+import de.sconto.pages.CategoryPage;
 import de.sconto.pages.HomePage;
 import de.sconto.pages.LoginPage;
 import io.cucumber.java8.En;
@@ -18,6 +19,7 @@ public class LoginSteps implements En {
 
     LoginPage loginPage;
     HomePage homePage;
+    CategoryPage categoryPage;
 
     public LoginSteps() {
 
@@ -37,6 +39,11 @@ public class LoginSteps implements En {
 
         When("I click on Login button", () -> {
             loginPage.clickLoginBtn();
+        });
+
+        When("I click on Login pop-up button", () -> {
+            categoryPage = page(CategoryPage.class);
+            loginPage = categoryPage.clickOnAnmeldenBtn();
         });
     }
 }

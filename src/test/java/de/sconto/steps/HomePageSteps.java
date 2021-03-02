@@ -24,8 +24,13 @@ public class HomePageSteps implements En {
             homePage.acceptCookies();
         });
 
+        Given("I am on the Homepage again", () -> {
+            homePage = open(basicURL, HomePage.class);
+        });
+
         Then("I should see Homepage", () -> {
             homePage.carousel().should(exist);
         });
+
     }
 }
