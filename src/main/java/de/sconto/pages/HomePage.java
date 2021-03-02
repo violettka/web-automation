@@ -27,6 +27,7 @@ public class HomePage {
     private static By banner = By.cssSelector(".consentForm__title");
     private static By loginIcon = By.cssSelector(".headerElement--login");
     private static By carouselImg = By.cssSelector(".carouselImage");
+    private static By sofasCategory = By.cssSelector(".categoryTileContainer__item:nth-child(1) > .categoryTile");
 
 
     public void acceptCookies(){
@@ -44,4 +45,15 @@ public class HomePage {
     }
 
     public SelenideElement carousel(){ return $(carouselImg); }
+
+    public CategoryPage clickOnCategory() {
+        $(sofasCategory).click();
+        return Selenide.page(CategoryPage.class);
+    }
+
+    public SelenideElement checkSofasCategoryName() {
+        return $(sofasCategory);
+    }
+
+
 }

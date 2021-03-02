@@ -30,4 +30,5 @@ public class LoginPage {
     }
 
     public SelenideElement loginPageHeader() {return $(loginHeader); }
+
 }
