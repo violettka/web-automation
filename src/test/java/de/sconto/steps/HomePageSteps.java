@@ -6,6 +6,7 @@ import io.cucumber.java8.En;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.page;
 import static de.sconto.pages.HomePage.basicURL;
 
 /**
@@ -16,12 +17,17 @@ import static de.sconto.pages.HomePage.basicURL;
  */
 public class HomePageSteps implements En {
     HomePage homePage;
+    LoginPage loginPage;
 
     public HomePageSteps() {
 
-        Given("I am on the Homepage", () -> {
-            homePage = open(basicURL, HomePage.class);
-            homePage.acceptCookies();
+        Given("I am on the {}", (String page) -> {
+            if(page.equals("Homepage")){
+                homePage = open(basicURL, HomePage.class);
+                homePage.acceptCookies();
+            } if (page.equals("Loginpage")){
+                open("http://the-internet.herokuapp.com/login");
+            }
         });
 
         Then("I should see Homepage", () -> {
