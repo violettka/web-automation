@@ -2,7 +2,8 @@ package com.herokuapp.steps;
 
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java8.En;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 
 import java.util.List;
@@ -19,11 +20,11 @@ import static com.herokuapp.pages.LoginPage.*;
  *
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
-public class LoginSteps implements En {
+public class LoginSteps {
 
-    public LoginSteps() {
 
-        When("I enter user credentials:", (DataTable table) -> {
+        @When("I enter user credentials:")
+        public void enterUserCredentials(DataTable table) {
             // convert data table to List of maps
             List<Map<String, String>> credentials = table.asMaps();
 
@@ -34,15 +35,16 @@ public class LoginSteps implements En {
             // input credentials
             $(usernameField).setValue(username);
             $(passwordField).setValue(password);
-        });
+        }
 
-        When("I click on Login button", () -> {
+        @When("I click on Login button")
+        public void clickLoginButton(){
             // login
             $(loginButton).click();
-        });
+        }
 
-        Then("I see successful login message", () -> {
+        @Then("I see successful login message")
+        public void verifyLoginMessage() {
             $(textMessage).shouldHave(text(successfulLoginMessage));
-        });
-    }
+        }
 }

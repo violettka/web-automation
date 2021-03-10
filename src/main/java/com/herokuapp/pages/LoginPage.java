@@ -25,7 +25,4 @@ public class LoginPage extends BasePage {
 
     public static String successfulLoginMessage = PropertiesLoader.loadProperty("positive.login.message");
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
 }

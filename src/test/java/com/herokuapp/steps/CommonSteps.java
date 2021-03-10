@@ -1,6 +1,6 @@
 package com.herokuapp.steps;
 
-import io.cucumber.java8.En;
+import io.cucumber.java.en.Given;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.herokuapp.pages.BasePage.basicURL;
@@ -11,17 +11,15 @@ import static com.herokuapp.pages.BasePage.basicURL;
  *
  * @author Violeta Abramova abramova.violetta@gmail.com
  */
-public class CommonSteps implements En {
+public class CommonSteps {
 
-    public CommonSteps() {
-
-        Given("I am on the {} page", (String page) -> {
-            if (page.equals("Hovers")) {
-                open(basicURL + "/hovers");
-            }
-            if (page.equals("Login")) {
-                open(basicURL + "/login");
-            }
-        });
+    @Given("^I am on the (Hovers|Login) page$")
+    public void goToPage(String page) {
+        if (page.equals("Hovers")) {
+            open(basicURL + "/hovers");
+        }
+        if (page.equals("Login")) {
+            open(basicURL + "/login");
+        }
     }
 }
