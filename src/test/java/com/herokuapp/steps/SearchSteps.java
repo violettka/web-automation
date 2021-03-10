@@ -13,7 +13,9 @@ public class SearchSteps implements En {
 
         Given("I open Search page", () -> {
             open("https://www.moemax.de/s/");
-            $(By.xpath("//button[@data-purpose='cookieBar.button.accept']")).click();
+            if ($(By.xpath("//button[@data-purpose='cookieBar.button.accept']")).exists()) {
+                $(By.xpath("//button[@data-purpose='cookieBar.button.accept']")).click();
+            }
         });
 
         When("I search for the {} color", (String color) -> {

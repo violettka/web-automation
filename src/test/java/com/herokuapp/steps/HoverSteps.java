@@ -5,10 +5,9 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.matchesText;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static com.herokuapp.pages.HoversPage.generateXpath;
-import static com.herokuapp.pages.HoversPage.user2;
-import static com.herokuapp.pages.HoversPage.user3;
+import static com.herokuapp.pages.HoversPage.*;
 
 
 /**
@@ -30,7 +29,9 @@ public class HoverSteps implements En {
                 user = user3;
             if (username.equals("user2"))
                 user = user2;
-            assert ($(user).getText().contains(username));
+            if(username.equals("user1"))
+                user = user1;
+           $(user).shouldHave(text(username));
         });
     }
 

@@ -13,5 +13,6 @@ Feature: Hovers Page
 
     Examples:
       | avatar_index | username|
+      | 1            | user1   |
       | 3            | user3   |
       | 2            | user2   |
