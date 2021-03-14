@@ -13,13 +13,16 @@ import static com.herokuapp.pages.BasePage.basicURL;
  */
 public class CommonSteps {
 
-    @Given("^I am on the (Hovers|Login) page$")
+    @Given("I am on the {} page")
     public void goToPage(String page) {
         if (page.equals("Hovers")) {
             open(basicURL + "/hovers");
         }
         if (page.equals("Login")) {
             open(basicURL + "/login");
+        }
+        if (page.equals("Signup")) {
+            open("https://business.glovoapp.com/signup");
         }
     }
 }

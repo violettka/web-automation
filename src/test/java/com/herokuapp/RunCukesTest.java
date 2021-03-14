@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/cucumber-report.json", "pretty"},
         glue = "com.herokuapp",
         strict = true,
-        tags = "@login"
+        tags = "@glovo"
 )
 public class RunCukesTest {
 }
