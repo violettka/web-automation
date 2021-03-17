@@ -1,0 +1,9 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1615998095813,335,HTTP Request,200,,Phone Book Users 1-1,,true,,501,270,1,1,http://dev.phonebook-1.telran-edu.de/api/user/login,328,0,126
+1615998095813,335,HTTP Request,200,,Phone Book Users 1-1,,true,,501,270,1,1,http://dev.phonebook-1.telran-edu.de/api/user/login,328,0,126
+1615998095559,335,Login User,200,"Number of samples in transaction : 1, number of failing samples : 0",Phone Book Users 1-1,,true,,501,270,1,1,null,328,245,126
+1615998095559,335,Login User,200,"Number of samples in transaction : 1, number of failing samples : 0",Phone Book Users 1-1,,true,,501,270,1,1,null,328,245,126
+1615998096154,243,HTTP Request,200,,Phone Book Users 1-1,,true,,274,262,1,1,http://dev.phonebook-1.telran-edu.de/api/user,243,0,27
+1615998096154,243,HTTP Request,200,,Phone Book Users 1-1,,true,,274,262,1,1,http://dev.phonebook-1.telran-edu.de/api/user,243,0,27
+1615998096154,243,Register User,200,"Number of samples in transaction : 1, number of failing samples : 0",Phone Book Users 1-1,,true,,274,262,1,1,null,243,1,27
+1615998096154,243,Register User,200,"Number of samples in transaction : 1, number of failing samples : 0",Phone Book Users 1-1,,true,,274,262,1,1,null,243,1,27
