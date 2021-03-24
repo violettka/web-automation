@@ -46,9 +46,8 @@ public class RunCukesTest implements WebDriverProvider, En {
     public WebDriver createDriver(DesiredCapabilities caps) {
         caps.setCapability("noReset", "false");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        caps.setCapability(MobileCapabilityType.UDID, "d113af9b");
-//        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         caps.setCapability("chromedriverExecutable", "/usr/local/bin/chromedriver");
         URL url = null;
         try {
