@@ -3,6 +3,7 @@ package com.herokuapp;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.cucumber.java8.En;
@@ -44,17 +45,20 @@ public class RunCukesTest implements WebDriverProvider, En {
 
     @Override
     public WebDriver createDriver(DesiredCapabilities caps) {
-        caps.setCapability("noReset", "false");
-        caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-        caps.setCapability("chromedriverExecutable", "/usr/local/bin/chromedriver");
+        caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+        caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Safari");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11");
+        caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.4");
+        caps.setCapability(MobileCapabilityType.UDID, "699B5875-B45D-4BA7-BB0D-550E28797700");
+        caps.setCapability("nativeWebTap", true);
+        caps.setCapability("noReset", true);
         URL url = null;
         try {
             url = new URL("http://localhost:4723/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        return new AndroidDriver(url, caps);
+        return new IOSDriver(url, caps);
     }
 }

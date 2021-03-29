@@ -1,6 +1,8 @@
 package com.herokuapp.steps;
 
 
+import com.codeborne.selenide.WebDriverRunner;
+import io.appium.java_client.ios.IOSDriver;
 import io.cucumber.java8.En;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -17,6 +19,8 @@ public class CommonSteps implements En {
 
         Given("I am on the Hovers page", () -> {
             open(basicURL + "/hovers");
+            IOSDriver driver = (IOSDriver) WebDriverRunner.getWebDriver();
+            driver.switchTo().window(driver.getWindowHandle());
         });
     }
 }
