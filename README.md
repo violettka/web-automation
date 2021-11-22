@@ -1,6 +1,6 @@
 ## web-automation
 
-This is the web test automation project for testing. It was built using Java 8, Selenium 3, Cucumber and Selenide frameworks [http://selenide.org/index.html ].
+This is the web test automation project for testing. It was built using Java 11, Selenium 4, Cucumber and Selenide frameworks [http://selenide.org/index.html ].
 
 ## Features
 
@@ -15,7 +15,7 @@ Feature files location:
 
 ## Prerequisites Software/Tools
 
-1. Java Development Kit (Java 8)
+1. Java Development Kit (Java 11)
 2. Java Runtime Environment
 3. Maven [ http://maven.apache.org/ ]
 4. Git [ http://git-scm.com/downloads ]
