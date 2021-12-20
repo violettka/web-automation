@@ -1,7 +1,9 @@
 package de.sconto.steps;
 
+import com.codeborne.selenide.Configuration;
 import de.sconto.pages.HomePage;
 import de.sconto.pages.LoginPage;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -17,6 +19,16 @@ import static de.sconto.pages.HomePage.basicURL;
  */
 public class HomePageSteps {
     HomePage homePage;
+
+    @Before
+    public void setUp(){
+        Configuration.remote = "http://localhost:4445/wd/hub";
+        Configuration.browserCapabilities.setCapability("enableVNC", true);
+        Configuration.browserCapabilities.setCapability("enableVideo", true);
+        Configuration.browser = "firefox";
+        Configuration.browserVersion = "95.0";
+
+    }
 
     @Given("I am on the Homepage")
     public void iAmOnHomePage() {

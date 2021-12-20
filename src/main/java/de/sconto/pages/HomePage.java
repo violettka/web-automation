@@ -26,12 +26,14 @@ public class HomePage {
     private static By acceptBtn = By.xpath("//*[@data-accept-action='all']");
     private static By banner = By.cssSelector(".consentForm__title");
     private static By loginIcon = By.cssSelector(".headerElement--login");
-    private static By carouselImg = By.cssSelector(".carouselImage");
+    private static By carouselImg = By.cssSelector(".imageResponsive");
 
 
     public void acceptCookies(){
-        $(acceptBtn).click();
-        $(banner).shouldNot(Condition.exist);
+        if ($(acceptBtn).exists()) {
+            $(acceptBtn).click();
+        }
+//        $(banner).shouldNot(Condition.exist);
     }
 
     public LoginPage clickLoginIcon() {

@@ -29,6 +29,12 @@ Feature files location:
 
 `mvn test`
 
+## Selenoid Run
+`docker-compose up`
+`mvn clean test`
+
+Selenid UI can be found at http://localhost:8080->8083
+
 ## Contributors
 
 Violeta Abramova abramova.violetta@gmail.com
